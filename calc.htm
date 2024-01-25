@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <script>
+            // Declare variables to store user inputs and result
+var num1, num2, operation, result, repeat;
+
+// Define functions to perform arithmetic operations
+function add(a, b) {
+  return a + b;
+}
+
+
+function subtract(a, b) {
+  return a - b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+
+function divide(a, b) {
+  // Check if the denominator is zero
+  if (b == 0) {
+    // Display an error message and return null
+    alert("Cannot divide by zero!");
+    return null;
+  } else {
+    // Perform the division and return the result
+    return a / b;
+  }
+}
+
+// Use a do-while loop to repeat the calculation until the user chooses to stop
+do {
+  // Use prompt to get input from the user for the two numbers and the type of operation
+  num1 = Number(prompt("Enter the first number:"));
+  num2 = Number(prompt("Enter the second number:"));
+  operation = prompt("Enter the type of operation (add, subtract, multiply, or divide):");
+
+  // Use switch to determine which operation to perform based on the user's input
+  switch (operation) {
+    case "add":
+      // Call the add function and store the result
+      result = add(num1, num2);
+      break;
+    case "subtract":
+      // Call the subtract function and store the result
+      result = subtract(num1, num2);
+      break;
+    case "multiply":
+      // Call the multiply function and store the result
+      result = multiply(num1, num2);
+      break;
+    case "divide":
+      // Call the divide function and store the result
+      result = divide(num1, num2);
+      break;
+    default:
+      // Display an error message and set the result to null
+      alert("Invalid operation!");
+      result = null;
+  }
+
+  // Check if the result is not null
+  if (result != null) {
+    // Display the result to the user using the alert toolbox
+    alert("The result is " + result);
+  } 
+
+  // Use confirm to ask the user if they want to perform another calculation
+  repeat = confirm("Do you want to perform another calculation?");
+} while (repeat); // Repeat the loop if the user chooses to continue
+        </script>
+    </body>
+</html>
+</body>
+</html>
